@@ -11,3 +11,5 @@ class Pessoa:
 
 #Objeto
 pessoa1 = Pessoa('João', 20)
+print("Nome:",pessoa1.nome)
+print("Idade:",pessoa1.idade)
