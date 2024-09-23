@@ -13,3 +13,7 @@ class Pessoa:
 pessoa1 = Pessoa('João', 20)
 print("Nome:",pessoa1.nome)
 print("Idade:",pessoa1.idade)
+
+pessoa2 = Pessoa('Maria', 30)
+print("Nome:",pessoa2.nome)
+print("Idade:",pessoa2.idade)
