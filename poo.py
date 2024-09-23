@@ -6,14 +6,13 @@ class Pessoa:
         self.nome = nome
         self.idade = idade
 
-    def imprimir(self):
-        print(f'Nome: {self.nome}, Idade: {self.idade}')
+    def saudacao(self):
+        return f'Olá, meu nome é {self.nome} e tenho {self.idade} anos'
 
 #Objeto
 pessoa1 = Pessoa('João', 20)
-print("Nome:",pessoa1.nome)
-print("Idade:",pessoa1.idade)
+print(pessoa1.saudacao())
+
 
 pessoa2 = Pessoa('Maria', 30)
-print("Nome:",pessoa2.nome)
-print("Idade:",pessoa2.idade)
+print(pessoa2.saudacao())
