@@ -8,3 +8,6 @@ class Pessoa:
 
     def imprimir(self):
         print(f'Nome: {self.nome}, Idade: {self.idade}')
+
+#Objeto
+pessoa1 = Pessoa('João', 20)
