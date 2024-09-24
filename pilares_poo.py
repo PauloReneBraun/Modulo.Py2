@@ -28,3 +28,4 @@ class Gato(Animal):
         return f'{self.nome} está miando'
     
 dog = Cachorro('Tobias', 'Caramelo')
+cat = Gato('Frajola', 'Branco')
