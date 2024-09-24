@@ -3,5 +3,7 @@ from typing import Any
 
 print("Exemplo de herança")
 class Animal:
-    def __call__(self, *args: Any, **kwds: Any) -> Any:
-        pass
+    def __init__(self, nome) -> None:
+        self.nome = nome
+
+    def falar(self) -> Any:
