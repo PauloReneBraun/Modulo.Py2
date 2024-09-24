@@ -6,4 +6,6 @@ class Animal:
     def __init__(self, nome) -> None:
         self.nome = nome
 
+    def andar(self) -> Any:
+        return f'{self.nome} está andando'
     def falar(self) -> Any:
