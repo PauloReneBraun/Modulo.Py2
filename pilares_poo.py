@@ -29,3 +29,8 @@ class Gato(Animal):
     
 dog = Cachorro('Tobias', 'Caramelo')
 cat = Gato('Frajola', 'Branco')
+
+print("\nExemplo de polimorfismo")
+animals = [dog, cat] 
+for animal in animais:
+    print(f"{animal.nome} está emitindo som: {animal.emitir_som()}")
