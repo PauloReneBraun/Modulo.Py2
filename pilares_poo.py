@@ -8,4 +8,5 @@ class Animal:
 
     def andar(self) -> Any:
         return f'{self.nome} está andando'
-    def falar(self) -> Any:
+    def emitir_som(self) -> Any:
+        return f'{self.nome} está emitindo som'
