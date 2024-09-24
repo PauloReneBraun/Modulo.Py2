@@ -26,3 +26,5 @@ class Gato(Animal):
 
     def miar(self) -> Any:
         return f'{self.nome} está miando'
+    
+dog = Cachorro('Tobias', 'Caramelo')
