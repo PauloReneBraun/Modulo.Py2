@@ -32,30 +32,31 @@ cat = Gato('Frajola', 'Branco')
 
 print("\nExemplo de polimorfismo")
 animals = [dog, cat] 
-for animal in animais:
+for animal in animals:
     print(f"{animal.nome} está emitindo som: {animal.emitir_som()}")
 
 print("\nExemplo de encapsulamento")
 class ContaBancaria:
-    def __init__(self, nome, saldo) -> None:
-        self.nome = nome
+    def __init__(self, saldo) -> None:
         self.__saldo = saldo
 
     def depositar(self, valor):
         if valor > 0:
             self.__saldo += valor
-            return f'{self.nome} depositou R${valor}'
         
 
     def sacar(self, valor):
         if valor > 0 and valor <= self.__saldo:
             self.__saldo -= valor
-            return f'{self.nome} sacou R${valor}'
-        return f'Saldo insuficiente'
     
     def consultar_saldo(self):
         return self.__saldo
     
 conta = ContaBancaria(saldo= 8000)
 print(f"Saldo atual: {conta.consultar_saldo()}")
-conta.depositar(saldo=1000)
+conta.depositar(valor=1000)
+print(f"Saldo atual: {conta.consultar_saldo()}")
+conta.depositar(valor=-500)
+print(f"Saldo atual: {conta.consultar_saldo()}")
+conta.sacar(valor=1000)
+print(f"Saldo atual: {conta.consultar_saldo()}")
