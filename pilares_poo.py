@@ -55,3 +55,7 @@ class ContaBancaria:
     
     def consultar_saldo(self):
         return self.__saldo
+    
+conta = ContaBancaria(saldo= 8000)
+print(f"Saldo atual: {conta.consultar_saldo()}")
+conta.depositar(saldo=1000)
