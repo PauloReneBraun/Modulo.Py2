@@ -7,9 +7,9 @@ class Animal:
         self.nome = nome
 
     def andar(self) -> Any:
-        return f'{self.nome} está andando'
+        return f'{self.nome} esta andando'
     def emitir_som(self) -> Any:
-        return f'{self.nome} está emitindo som'
+        return f'{self.nome} esta emitindo som'
     
 class Cachorro(Animal):
     def __init__(self, nome, raca) -> None:
@@ -17,7 +17,7 @@ class Cachorro(Animal):
         self.raca = raca
 
     def latir(self) -> Any:
-        return f'{self.nome} está latindo'
+        return f'{self.nome} esta latindo'
     
 class Gato(Animal):
     def __init__(self, nome, cor) -> None:
@@ -25,7 +25,7 @@ class Gato(Animal):
         self.cor = cor
 
     def miar(self) -> Any:
-        return f'{self.nome} está miando'
+        return f'{self.nome} esta miando'
     
 dog = Cachorro('Tobias', 'Caramelo')
 cat = Gato('Frajola', 'Branco')
@@ -33,7 +33,7 @@ cat = Gato('Frajola', 'Branco')
 print("\nExemplo de polimorfismo")
 animals = [dog, cat] 
 for animal in animals:
-    print(f"{animal.nome} está emitindo som: {animal.emitir_som()}")
+    print(f"{animal.nome} esta emitindo som: {animal.emitir_som()}")
 
 print("\nExemplo de encapsulamento")
 class ContaBancaria:
@@ -60,3 +60,5 @@ conta.depositar(valor=-500)
 print(f"Saldo atual: {conta.consultar_saldo()}")
 conta.sacar(valor=1000)
 print(f"Saldo atual: {conta.consultar_saldo()}")
+
+conta_do_luizinho = ContaBancaria(saldo= 20)
