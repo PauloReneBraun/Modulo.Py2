@@ -21,3 +21,4 @@ pterodactilo = Pterodactilo(nome ="fantasma do pterodactilo Original")
 
 # Acessando métodos da classe Pterodáctilo
 print("Nome do pterodactilo:", pterodactilo.nome)
+print("Pterodactilo emite som:", pterodactilo.emitir_som())
