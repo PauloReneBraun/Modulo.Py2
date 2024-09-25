@@ -45,3 +45,13 @@ class ContaBancaria:
         if valor > 0:
             self.__saldo += valor
             return f'{self.nome} depositou R${valor}'
+        
+
+    def sacar(self, valor):
+        if valor > 0 and valor <= self.__saldo:
+            self.__saldo -= valor
+            return f'{self.nome} sacou R${valor}'
+        return f'Saldo insuficiente'
+    
+    def consultar_saldo(self):
+        return self.__saldo
