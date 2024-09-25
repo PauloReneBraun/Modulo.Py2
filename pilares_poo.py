@@ -1,7 +1,7 @@
 #Exemplo de herança 
 from typing import Any
 
-print("Exemplo de herança")
+print("Exemplo de heranca")
 class Animal:
     def __init__(self, nome) -> None:
         self.nome = nome
@@ -62,3 +62,15 @@ conta.sacar(valor=1000)
 print(f"Saldo atual: {conta.consultar_saldo()}")
 
 conta_do_luizinho = ContaBancaria(saldo= 20)
+
+print("\nExemplo de abstração")
+from abc import ABC, abstractmethod
+
+class Veiculo(ABC):
+    @abstractmethod
+    def ligar(self):
+        pass
+    
+    @abstractmethod
+    def desligar(self):
+        pass
