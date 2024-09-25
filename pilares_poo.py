@@ -40,3 +40,6 @@ class ContaBancaria:
     def __init__(self, nome, saldo) -> None:
         self.nome = nome
         self.__saldo = saldo
+
+    def get_saldo(self) -> Any:
+        return self.__saldo
