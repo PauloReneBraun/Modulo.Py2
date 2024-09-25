@@ -11,7 +11,7 @@ def minha_funcao():
 
 minha_funcao()
 
-class MeuDecorador:
+class MeuDecoradorDeClasse:
     def __init__(self, func):
         self.func = func
 
@@ -20,6 +20,6 @@ class MeuDecorador:
         self.func()
         print('Estou depois da execução da função')
 
-@MeuDecorador
+@MeuDecoradorDeClasse
 def segunda_funcao():
-    print('Estou sendo executada')
+    print('Estou sendo executada x__x')
