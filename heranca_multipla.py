@@ -12,7 +12,11 @@ class Ave(animal):
     def voar(self):
         return f"{self.nome} Pode voar"
     
-class pterodáctilo(Reptil, Ave):
+class Pterodáctilo(Reptil, Ave):
     def emitir_som(self):
         super().emitir_som()
         return "Emitem Sons Altos e Estridentes"
+    
+pterodáctilo = Pterodáctilo(nome ="fantasma do pterodáctilo Original")
+
+# Acessando métodos da classe Pterodáctilo
