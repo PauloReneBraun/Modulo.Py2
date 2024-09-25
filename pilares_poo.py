@@ -41,5 +41,7 @@ class ContaBancaria:
         self.nome = nome
         self.__saldo = saldo
 
-    def get_saldo(self) -> Any:
-        return self.__saldo
+    def depositar(self, valor):
+        if valor > 0:
+            self.__saldo += valor
+            return f'{self.nome} depositou R${valor}'
