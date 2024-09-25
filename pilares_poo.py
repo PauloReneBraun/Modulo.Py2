@@ -34,3 +34,9 @@ print("\nExemplo de polimorfismo")
 animals = [dog, cat] 
 for animal in animais:
     print(f"{animal.nome} está emitindo som: {animal.emitir_som()}")
+
+print("\nExemplo de encapsulamento")
+class ContaBancaria:
+    def __init__(self, nome, saldo) -> None:
+        self.nome = nome
+        self.__saldo = saldo
