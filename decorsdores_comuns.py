@@ -21,3 +21,18 @@ print(obj.metodo_instancia())
 print(MinhaClasse.valor)
 print(MinhaClasse.metodo_classe())
 print(MinhaClasse.metodo_estatico())
+
+class moto:
+  def __init__(self, marca, modelo, cor) -> None:
+    self.marca = marca
+    self.modelo = modelo
+    self.cor = cor
+
+  @classmethod
+  def criar_moto(cls, configuracao):
+    marca, modelo, cor = configuracao.split('-')
+    return cls(marca, modelo, cor)
+  
+configuracao = "Honda-CB300-Preto"
+moto1 = moto.criar_moto(configuracao)
+print(moto1.marca)
