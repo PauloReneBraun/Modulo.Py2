@@ -36,3 +36,12 @@ class moto:
 configuracao = "Honda-CB300-Preto"
 moto1 = moto.criar_moto(configuracao)
 print(moto1.marca)
+
+class Matematica:
+  @staticmethod
+  def soma(a, b):
+    return a + b
+
+  @staticmethod
+  def subtracao(a, b):
+    return a - b
