@@ -5,5 +5,8 @@ class MinhaClasse:
   def __init__(self, nome) -> None:
     self.nome = nome #Atributo da instância
 
-obj = MinhaClasse('')
-obj.nome
+  def metodo_instancia(self):
+    return f"Metodo de instancia {self.nome}"
+
+obj = MinhaClasse(nome="Exemplo")
+print(obj.metodo_instancia())
