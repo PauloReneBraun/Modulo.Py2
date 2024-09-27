@@ -22,6 +22,9 @@ class Heroi(Personagem):
         self.__habilidade = habilidade
         self.__arma = 'Espada'
         self.__poder = 'Fogo'
+
+    def get_habilidade(self):
+        return self.__habilidade
     def get_arma(self):
         return self.__arma
     
