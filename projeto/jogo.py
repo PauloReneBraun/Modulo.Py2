@@ -30,3 +30,19 @@ class Heroi(Personagem):
     
     def get_poder(self):
         return self.__poder
+    
+class Inimigo(Personagem):
+    def __init__(self, nome, vida, nivel, tipo):
+        super().__init__(nome, vida, nivel)
+        self.__tipo = tipo
+        self.__arma = 'Espada'
+        self.__poder = 'Fogo'
+        
+    def get_tipo(self):
+        return self.__tipo
+    
+    def get_arma(self):
+        return self.__arma
+    
+    def get_poder(self):
+        return self.__poder
