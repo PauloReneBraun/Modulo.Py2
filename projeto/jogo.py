@@ -52,3 +52,8 @@ class Inimigo(Personagem):
     
     def exibir_detalhes(self):
         return f'Nome: {self.get_nome()} | Vida: {self.get_vida()} | Nível: {self.get_nivel()} | Tipo: {self.get_tipo()} | Arma: {self.get_arma()} | Poder: {self.get_poder()}'
+    
+Heroi1 = Heroi(nome='João', vida=100, nivel=1, habilidade='Voar')
+print(Heroi1.exibir_detalhes())
+inimigo1 = Inimigo(nome='Maria', vida=100, nivel=1, tipo='Zumbi')
+print(inimigo1.exibir_detalhes())
