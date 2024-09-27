@@ -34,6 +34,8 @@ class Heroi(Personagem):
     def exibir_detalhes(self):
         return f'Nome: {self.get_nome()} | Vida: {self.get_vida()} | Nível: {self.get_nivel()} | Habilidade: {self.get_habilidade()} | Arma: {self.get_arma()} | Poder: {self.get_poder()}'
     
+  
+    
 class Inimigo(Personagem):
     def __init__(self, nome, vida, nivel, tipo):
         super().__init__(nome, vida, nivel)
