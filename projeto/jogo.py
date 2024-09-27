@@ -17,8 +17,9 @@ class Personagem:
         return self.__nivel
     
 class Heroi(Personagem):
-    def __init__(self, nome, vida, nivel):
+    def __init__(self, nome, vida, nivel, habilidade):
         super().__init__(nome, vida, nivel)
+        self.__habilidade = habilidade
         self.__arma = 'Espada'
         self.__poder = 'Fogo'
     def get_arma(self):
