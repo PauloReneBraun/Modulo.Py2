@@ -15,3 +15,14 @@ class Personagem:
     
     def get_nivel(self):
         return self.__nivel
+    
+class Heroi(Personagem):
+    def __init__(self, nome, vida, nivel):
+        super().__init__(nome, vida, nivel)
+        self.__arma = 'Espada'
+        self.__poder = 'Fogo'
+    def get_arma(self):
+        return self.__arma
+    
+    def get_poder(self):
+        return self.__poder
