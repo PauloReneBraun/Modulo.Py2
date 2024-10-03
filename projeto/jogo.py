@@ -33,6 +33,16 @@ class Heroi(Personagem):
     
     def exibir_detalhes(self):
         return f'Nome: {self.get_nome()} | Vida: {self.get_vida()} | Nível: {self.get_nivel()} | Habilidade: {self.get_habilidade()} | Arma: {self.get_arma()} | Poder: {self.get_poder()}'
+
+    def receber_dano(self, dano):
+        self.__vida -= dano
+        if self.__vida <= 0:
+            self.__vida = 0
+    
+    def atacar(self, alvo):
+        dano = self.__nivel * 2
+        print(f'O herói {self.get_nome()} atacou o inimigo {alvo.get_nome()} e causou {dano} de dano.')
+
     
   
     
@@ -55,6 +65,41 @@ class Inimigo(Personagem):
     def exibir_detalhes(self):
         return f'Nome: {self.get_nome()} | Vida: {self.get_vida()} | Nível: {self.get_nivel()} | Tipo: {self.get_tipo()} | Arma: {self.get_arma()} | Poder: {self.get_poder()}'
     
+
+    def ataque_especial(self, alvo):
+        dano = self.__nivel * 3
+        print(f'O inimigo {self.get_nome()} atacou o herói {alvo.get_nome()} com ataque especial e causou {dano} de dano.')
+    class Jogo:
+        """Classe para representar o jogo"""
+        def __init__(self):
+            self.heroi =Heroi(nome='João', vida=100, nivel=1, habilidade='Voar')
+            self.inimigo = Inimigo(nome='Maria', vida=100, nivel=1, tipo='Zumbi')
+            self.__personagens = []
+            
+        def iniciar_jogo(self):
+            """Método para controle de batalha"""
+            print('O jogo começou!')
+            while self.heroi.get_vida() > 0 and self.inimigo.get_vida() > 0:
+                print("\nDetalhes do herói:")
+                print(self.heroi.exibir_detalhes())
+                print("\nDetalhes do inimigo:")
+                print(self.inimigo.exibir_detalhes())
+
+                input("\nPressione Enter para atacar o inimigo...")
+                escolha = input("Escolha o ataque (1 - Fogo, 2 - Gelo, 3 - Raio): ")    
+                if escolha == '1':
+                    self.heroi.atacar(self.inimigo)
+                else:
+                    print('Ataque inválido!')
+            if self.heroi.get_vida() > 0:
+                print('O herói venceu a batalha!')
+            else:
+                print('O inimigo venceu a batalha!')
+    
+
+#Criação de jogo e inicio de batalha 
+jogo = Jogo()
+jogo.iniciar_jogo()
 Heroi1 = Heroi(nome='João', vida=100, nivel=1, habilidade='Voar')
 print(Heroi1.exibir_detalhes())
 inimigo1 = Inimigo(nome='Maria', vida=100, nivel=1, tipo='Zumbi')
