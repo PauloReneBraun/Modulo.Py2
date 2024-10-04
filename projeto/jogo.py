@@ -90,6 +90,8 @@ class Inimigo(Personagem):
                 escolha = input("Escolha o ataque (1 - Fogo, 2 - Gelo, 3 - Raio): ")    
                 if escolha == '1':
                     self.heroi.atacar(self.inimigo)
+                elif escolha == '2':
+                    self.heroi.ataque_especial(self.inimigo)
                 else:
                     print('Ataque inválido!')
             if self.heroi.get_vida() > 0:
