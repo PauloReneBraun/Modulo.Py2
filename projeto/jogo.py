@@ -94,6 +94,12 @@ class Inimigo(Personagem):
                     self.heroi.ataque_especial(self.inimigo)
                 else:
                     print('Ataque inválido!')
+
+
+
+                if self.inimigo.get_vida() > 0:
+                    #iNIMIGO ATACA IO HEROI
+                    self.inimigo.atacar(self.heroi)
             if self.heroi.get_vida() > 0:
                 print('O herói venceu a batalha!')
             else:
