@@ -69,7 +69,7 @@ class Inimigo(Personagem):
     def ataque_especial(self, alvo):
         dano = self.__nivel * 5
         alvo.receber_dano(dano)
-        print(f'O inimigo {self.get_nome()} atacou o herói {alvo.get_nome()} com ataque especial e causou {dano} de dano.')
+        print(f'{self.get_nome()} usou habilidade especial {self.get_nome()} e causou {dano} de dano.')
     class Jogo:
         """Classe para representar o jogo"""
         def __init__(self):
