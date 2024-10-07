@@ -40,7 +40,7 @@ class Heroi(Personagem):
             self.__vida = 0
     
     def atacar(self, alvo):
-        dano = self.__nivel * 2
+        dano = random.randint(self.get_nivel() * 2, self.get_nivel() * 4) #baseado no nivel
         print(f'O herói {self.get_nome()} atacou o inimigo {alvo.get_nome()} e causou {dano} de dano.')
 
     
@@ -67,7 +67,7 @@ class Inimigo(Personagem):
     
 
     def ataque_especial(self, alvo):
-        dano = self.__nivel * 5
+        dano = random.randint(self.get_nivel() * 5, self.get_nivel() * 8)
         alvo.receber_dano(dano)
         print(f'{self.get_nome()} usou habilidade especial {self.get_nome()} e causou {dano} de dano.')
     class Jogo:
